@@ -12,7 +12,6 @@ namespace Circle
 {
     public partial class Form1 : Form
     {
-        Pen pen = new Pen(Color.Yellow, 2);
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +27,8 @@ namespace Circle
                 int diameter = rnd.Next(20, 70);
                 int x = rnd.Next(0, this.ClientSize.Width - diameter);
                 int y = rnd.Next(0, this.ClientSize.Height - diameter);
-                using (Brush yellowBrush = new SolidBrush(Color.Yellow))
+                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                using (Brush yellowBrush = new SolidBrush(randomColor))
                 {
                     g.FillEllipse(yellowBrush, x, y, diameter, diameter);
                 }                
@@ -37,6 +37,11 @@ namespace Circle
                     g.DrawEllipse(blackPen, x, y, diameter, diameter);
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
