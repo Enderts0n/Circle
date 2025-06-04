@@ -20,8 +20,8 @@ namespace Circle
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
             Random rnd = new Random();
+            Graphics g = this.CreateGraphics();
             int count = 5;
             for (int i = 0; i < count; i++)
             {                
