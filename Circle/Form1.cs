@@ -27,7 +27,7 @@ namespace Circle
                 int diameter = rnd.Next(20, 70);
                 int x = rnd.Next(0, this.ClientSize.Width - diameter);
                 int y = rnd.Next(0, this.ClientSize.Height - diameter);
-                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256));
+                Color randomColor = Color.FromArgb(rnd.Next(256), rnd.Next(256), rnd.Next(256)); //text
                 using (Brush yellowBrush = new SolidBrush(randomColor))
                 {
                     g.FillEllipse(yellowBrush, x, y, diameter, diameter);
